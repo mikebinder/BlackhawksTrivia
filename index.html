@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blackhawks Trivia</title>
-    <!-- Latest compiled and minified CSS -->
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- My CSS -->
+    
     <link rel="stylesheet" href="style.css">
     
     
@@ -67,9 +67,9 @@ var questionNumber = 0;
 $( document ).ready(function(){
 
 function startScreen(){
-  //Create the start button
+  
   trivia.initialScreen = "<p class='text-center main-button'><a class='btn btn-primary btn-lg start-button text-center' href='#'>PLAY</a></p>";
-  //Add Start button to main-area
+  
   $(".main-area").html(trivia.initialScreen);
 };
 
@@ -88,13 +88,13 @@ function timer(){
 };
 
 function wait(){
-  if(trivia.questionCounter < 8) {
+  if(trivia.questionCounter < 7) {
     trivia.questionCounter ++;
     generateHTML();
     trivia.timeCounter = 10;
     timer();
   }
-  else {
+  else if (trivia.questionCounter === trivia.questionsArray.length - 1) {
     finalScreen();
   }
 };
@@ -121,7 +121,8 @@ function timeOutLoss(){
 };
 
 function finalScreen(){
-  trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" + "<p class='text-center'>All done, here's how you did!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter + "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" 
+  trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" + "<p class='text-center'>All done!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter + "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" 
+  $(".main-area").html(trivia.gameHTML);
 };
 
 function resetGame(){
@@ -140,29 +141,28 @@ function generateHTML(){
 }
 
 
-//MAIN PROCESS
-//===========================================
+
 startScreen();
 
-//start-button click
+
 $("body").on("click", ".start-button", function(event){
 	event.preventDefault();
     generateHTML();
     $("#logo").toggle(2000);
     $("#rules").toggle(2000)
-    $("#game").slide(2000)
+    $("#game").add(2000)
 	timer();
-}); // Closes start-button click
+}); 
 
 $("body").on("click", ".answer", function(event){
-  //If correct answer
+  
   selectedAnswer = $(this).text();
 	if(selectedAnswer === trivia.correctAnswers[trivia.questionCounter]) {
 
 		clearInterval(trivia.clock);
 		win();
 	}
-  //If incorrect ansewr
+  
 	else {
 
 		clearInterval(trivia.clock);
