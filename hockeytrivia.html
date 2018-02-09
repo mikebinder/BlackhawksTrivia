@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blackhawks Trivia</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified jQuery -->
+    
+
+    </head>
+
+    <body>
+      <div id ="titlescreen"></div>
+   
+        <p id="title">CHICAGO BLACKHAWKS TRIVIA</p>
+                   <img src="assets/hawkslogo.png" id="logo">
+                   
+                   <!-- <p class="intro">THIS GAME WILL TEST YOUR HAWKS KNOWLEDGE WITH QUESTIONS OF VARYING DIFFICULTY.</p>
+                   <p class="intro">CLICK THE LOGO TO BEGIN!</p> -->
+    </div>
+
+   
+      
+        <div class="panel" id="game">
+            <div class="panel-body">
+              <p id="timer"></p>
+              <h3 id = "question"></h3>
+              <p><button type="button" class="btn btn-secondary" id = "a0"></button></p>
+              <p><button type="button" class="btn btn-secondary" id = "a1"></button></p>
+              <p><button type="button" class="btn btn-secondary" id = "a2"></button></p>
+              <p><button type="button" class="btn btn-secondary" id = "a3"></button></p>
+            </div>
+            <p id="answer"></p>
+            <p id="funfact"></p>
+            <img src = "" width = "400px">'
+          </div>
+
+
+      
+    
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript"></script>
+
+
+
+    <script>
+
+var questionCount = 0
+var correctAnswers = 0
+var wrongAnswers = 0
+
+var questionNumber = 0;
+
+
+
+
+    var questions = [{
+        question: "Which player has played the most games as a member of the Chicago Blackhawks?",
+        possibleAnswers: ["Bobby Hull", "Brent Seabrook", "Stan Mikita", "Denis Savard"],
+        id: 'question-one',
+        answer: 2,
+        comment: "Stan Mikita pulled on the famous Hawks sweater a record 1,394 times!",
+},{
+	question: "Which of the following players has never won the Art Ross Trophy, the annual award given to the player with the most points in the regular season?",
+			possibleAnswers: ["Patrick Kane", "Roy Conacher", "Bobby Hull", "Jonathan Toews"],
+			id: 'question-two',
+      answer: 3,
+      comment: "Although he's won 3 Stanley Cups, a Conn Smythe, and a Selke Award, Jonathan Toews has never led the league in scoring!",
+},{
+	question: "Who has never been head coach of the Blackhawks?",
+			possibleAnswers: ["Alpo Suhonen", "Scotty Bowman", "Mike Keenan", "Lorne Molleken"],
+			id: 'question-three',
+      answer: 1,
+      comment: "While he currently serves as an advisor for the Blackhawks, they were not among the five teams he coached in his Hall of Fame career.",
+},{
+  question: "Who is the Blackhawks all-time leader in penalty minutes?",
+  possibleAnswers: ["Bob Probert", "Keith Magnuson", "Chris Chelios", "Dave Manson"],
+  id: 'question-four',
+  answer: 3,
+  comment:"Chris Chelios spent 1,495 minutes in the penalty box. That's almost 25 hours!",
+},{
+  question: "Which player has not won Rookie of the Year as a member of the Blackhawks?",
+  possibleAnswers: ["Artemi Panarin", "Ed Belfour", "Steve Larmer", "Duncan Keith"],
+  id: 'question-five',
+  answer: 3,
+  comment: "Duncan Keith never had a chance. Alex Ovechkin was the 2006/2006 Rookie of the Year.",
+},{
+	question: "Which player, widely regarded as the best defenseman of all time, ended his Hall of Fame career on the Blackhawks?",
+			possibleAnswers: ["Bobby Orr", "Chris Chelios", "Pierre Pilote", "Paul Coffey"],
+			id: 'question-six',
+      answer: 0,
+      comment: "Although each was a member of the Blackhawks, only Bobby Orr ended his career in Chicago.",
+},{
+  question: "Who has scored the most powerplay goals as a member of the Blackhawks?",
+  possibleAnswers: ["Jeremy Roenick", "Steve Larmer","Tony Amonte", "Eric Daze"],
+  id: 'question-seven',
+  answer: 1,
+  comment:"Steve Larmer scored an astounding 153 powerplay goals. Patrick Kane, the current active leader, has only managed 89.",
+},{
+	question: "What is the official listed capacity of the United Center?",
+  possibleAnswers: ["18,555", "19,717", "20,240", "22,259"],
+  id: 'question-eight',
+  answer: 1,
+  comment: "19,717. But they routinely pack in thousands more.",
+}];
+
+
+
+
+
+
+$(document).ready(function(){
+
+  function win(){
+  trivia.correctAnswers++;
+  setTimeout(wait, 4000);
+
+  }
+
+  function loss (){
+  wrongAnswers ++;
+  setTimeout(wait, 4000);
+
+  }
+
+
+
+
+
+   
+   
+
+  // $("#startbutton").click(function (){
+  //       $("#startbutton").hide();
+  //       $(".intro").hide()
+        
+
+  // })
+        
+
+  $("#startbutton").click(function startGame (){
+    $("#startbutton").hide();
+  })
+
+function
+        $("#question").text(questions[0].question)
+        $("#a0").text(questions[0].possibleAnswers[0])
+        $("#a1").text(questions[0].possibleAnswers[1])
+        $("#a2").text(questions[0].possibleAnswers[2])
+        $("#a3").text(questions[0].possibleAnswers[3])
+
+        
+  
+  
+
+
+
+
+})
+  
+  
+	
+
+  
+
+    </script>
+
+  
+    </body>
+    </html>
+
+    
+   

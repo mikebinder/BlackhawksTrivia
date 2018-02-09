@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "hockey";
+    src: url("hawks.ttf");  
+
+}
+
+body {
+    background-image: url("rink.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.center-block {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.text-center {
+    background-color: transparent;
+    border: none;
+    color: black;
+    
+}
+
+button {
+    margin: 6px;
+}
+
+img {
+    margin-bottom: 10px;
+}
+
+#title {
+    margin-top: 50px;
+    font-family:"hockey";
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    text-shadow: 8px 8px black;
+
+    
+}
+
+#rules {
+    font-family:"hockey";
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-shadow: 8px 8px black;
+}
+.intro {
+    margin-top: 0px;
+    font-family:"hockey";
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-shadow: 4px 4px black;
+}
+#clicktobegin {
+    margin-top: 0px;
+    font-family:"hockey";
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    text-shadow: 4px 4px black;
+}
+
+#logo {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    height:450px;
+    width:auto;
+}
+
+#game {
+    font-family: "hockey";
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 25px;
+    font-size:25px;
+    
+}
+#question {
+    font-size:30px;
+}
+
+#answer {
+    font-size: 20px;
+}
+
+.btn {
+    clear:both;
+    font-size: 30px;
+    width:300px;
+}
+
