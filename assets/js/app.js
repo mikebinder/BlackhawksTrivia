@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blackhawks Trivia</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    
-    
-    
 
-    </head>
-
-    <body>
-      <div id ="titlescreen"></div>
-   
-        <p id="title">CHICAGO BLACKHAWKS TRIVIA</p>
-        <p id="rules">THIS GAME WILL TEST YOUR HAWKS KNOWLEDGE WITH QUESTIONS OF VARYING DIFFICULTY</p>
-        <img src="assets/images/hawkslogo.png" id="logo">
-    </div>
-
-   
-      
-        <div class="main-area" id="game">
-                
-              
-        
-        </div>
-
-    
-      
-    
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/app.js"></script>
-    <script>
-    
     
 var trivia = {
 initialScreen: "",
@@ -124,7 +84,7 @@ setTimeout(wait, 5000);
 };
 
 function finalScreen(){
-trivia.gameHTML = "<p class='text-center'>All done!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter + "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" 
+trivia.gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + trivia.timeCounter + "</span></p>" + "<p class='text-center'>All done!" + "</p>" + "<p class='summary-correct'>Correct Answers: " + trivia.correctCounter + "</p>" + "<p>Wrong Answers: " + trivia.inCorrectCounter + "</p>" + "<p>Unanswered: " + trivia.unAnsweredCounter + "</p>" 
 $(".main-area").html(trivia.gameHTML);
 };
 
@@ -172,20 +132,5 @@ else {
     loss();
 }
 }); 
-})
 
 
-
-    </script>
-    
-    
-
-
-
-
-  
-    </body>
-    </html>
-
-    
-   
